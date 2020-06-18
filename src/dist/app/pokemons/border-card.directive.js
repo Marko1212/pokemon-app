@@ -32,7 +32,6 @@ var BorderCardDirective = /** @class */ (function () {
     BorderCardDirective.prototype.setHeight = function (height) {
         this.el.nativeElement.style.height = height + "px";
     };
-    var _a;
     __decorate([
         core_1.Input("pkmnBorderCard"),
         __metadata("design:type", String)
@@ -53,7 +52,7 @@ var BorderCardDirective = /** @class */ (function () {
         core_1.Directive({
             selector: "[pkmnBorderCard]",
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof core_1.ElementRef !== "undefined" && core_1.ElementRef) === "function" ? _a : Object])
+        __metadata("design:paramtypes", [core_1.ElementRef])
     ], BorderCardDirective);
     return BorderCardDirective;
 }());
