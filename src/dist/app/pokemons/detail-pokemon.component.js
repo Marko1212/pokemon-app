@@ -31,7 +31,7 @@ var DetailPokemonComponent = /** @class */ (function () {
         this.pokemonsService.deletePokemon(pokemon).subscribe(function (_) { return _this.goBack(); });
     };
     DetailPokemonComponent.prototype.goBack = function () {
-        this.router.navigate(["/pokemons"]);
+        this.router.navigate(["/pokemon/all"]);
         //window.history.back();
     };
     DetailPokemonComponent.prototype.goEdit = function (pokemon) {

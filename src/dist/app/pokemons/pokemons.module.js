@@ -10,15 +10,16 @@ var core_1 = require("@angular/core");
 var common_1 = require("@angular/common");
 var forms_1 = require("@angular/forms");
 var pokemons_routing_module_1 = require("./pokemons-routing.module");
+var border_card_directive_1 = require("./border-card.directive");
+var pokemon_type_color_pipe_1 = require("./pokemon-type-color.pipe");
+var pokemons_service_1 = require("./pokemons.service");
 var list_pokemon_component_1 = require("./list-pokemon.component");
 var detail_pokemon_component_1 = require("./detail-pokemon.component");
 var edit_pokemon_component_1 = require("./edit-pokemon.component");
 var pokemon_form_component_1 = require("./pokemon-form.component");
 var search_pokemon_component_1 = require("./search-pokemon.component");
 var loader_component_1 = require("../loader.component");
-var border_card_directive_1 = require("./border-card.directive");
-var pokemon_type_color_pipe_1 = require("./pokemon-type-color.pipe");
-var pokemons_service_1 = require("./pokemons.service");
+var auth_guard_service_1 = require("../auth-guard.service");
 var PokemonsModule = /** @class */ (function () {
     function PokemonsModule() {
     }
@@ -35,7 +36,7 @@ var PokemonsModule = /** @class */ (function () {
                 border_card_directive_1.BorderCardDirective,
                 pokemon_type_color_pipe_1.PokemonTypeColorPipe,
             ],
-            providers: [pokemons_service_1.PokemonsService],
+            providers: [pokemons_service_1.PokemonsService, auth_guard_service_1.AuthGuard],
         })
     ], PokemonsModule);
     return PokemonsModule;
