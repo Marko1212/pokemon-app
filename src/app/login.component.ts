@@ -63,7 +63,7 @@ export class LoginComponent {
   setMessage() {
     this.message = this.authService.isLoggedIn
       ? "Vous êtes connecté."
-      : "Identifiant ou mot de passe incorrect.";
+      : "Vous êtes déconnecté. (pikachu/pikachu)";
   }
 
   // Connecte l'utilisateur auprès du Guard
@@ -88,6 +88,6 @@ export class LoginComponent {
   // Déconnecte l'utilisateur
   logout() {
     this.authService.logout();
-    this.message = "Vous êtes déconnecté. (pikachu/pikachu)";
+    this.setMessage();
   }
 }
