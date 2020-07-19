@@ -22,7 +22,7 @@ var LoginComponent = /** @class */ (function () {
     LoginComponent.prototype.setMessage = function () {
         this.message = this.authService.isLoggedIn
             ? "Vous êtes connecté."
-            : "Identifiant ou mot de passe incorrect.";
+            : "Vous êtes déconnecté. (pikachu/pikachu)";
     };
     // Connecte l'utilisateur auprès du Guard
     LoginComponent.prototype.login = function () {
@@ -47,7 +47,7 @@ var LoginComponent = /** @class */ (function () {
     // Déconnecte l'utilisateur
     LoginComponent.prototype.logout = function () {
         this.authService.logout();
-        this.message = "Vous êtes déconnecté. (pikachu/pikachu)";
+        this.setMessage();
     };
     LoginComponent = __decorate([
         core_1.Component({
