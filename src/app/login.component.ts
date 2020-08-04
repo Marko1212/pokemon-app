@@ -88,6 +88,6 @@ export class LoginComponent {
   // Déconnecte l'utilisateur
   logout() {
     this.authService.logout();
-    this.setMessage();
+    this.message = "Vous êtes déconnecté. (pikachu/pikachu)";
   }
 }
