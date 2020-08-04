@@ -59,7 +59,7 @@ export class LoginComponent {
 
   constructor(private authService: AuthService, private router: Router) {}
 
-  // Informe l'utilisateur sur son authentfication.
+  // Informe l'utilisateur sur son authentification.
   setMessage() {
     this.message = this.authService.isLoggedIn
       ? "Vous êtes connecté."

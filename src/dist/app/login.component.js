@@ -18,11 +18,11 @@ var LoginComponent = /** @class */ (function () {
         this.router = router;
         this.message = "Vous êtes déconnecté. (pikachu/pikachu)";
     }
-    // Informe l'utilisateur sur son authentfication.
+    // Informe l'utilisateur sur son authentification.
     LoginComponent.prototype.setMessage = function () {
         this.message = this.authService.isLoggedIn
             ? "Vous êtes connecté."
-            : "Vous êtes déconnecté. (pikachu/pikachu)";
+            : "Identifiant ou mot de passe incorrect.";
     };
     // Connecte l'utilisateur auprès du Guard
     LoginComponent.prototype.login = function () {
