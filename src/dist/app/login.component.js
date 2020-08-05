@@ -20,9 +20,14 @@ var LoginComponent = /** @class */ (function () {
     }
     // Informe l'utilisateur sur son authentification.
     LoginComponent.prototype.setMessage = function () {
-        this.message = this.authService.isLoggedIn
-            ? "Vous êtes connecté."
-            : "Identifiant ou mot de passe incorrect.";
+        if (this.message === "Vous êtes connecté.") {
+            this.message = "Vous êtes déconnecté. (pikachu/pikachu)";
+        }
+        else {
+            this.message = this.authService.isLoggedIn
+                ? "Vous êtes connecté."
+                : "Identifiant ou mot de passe incorrect.";
+        }
     };
     // Connecte l'utilisateur auprès du Guard
     LoginComponent.prototype.login = function () {
